@@ -100,7 +100,7 @@ This setting is from your web.config machineKey section compatibilityMode value.
 
 
 ``` xml
-<machineKey validation="SHA1" validationKey="XXXXX" decryption="AES" decryptionKey="XXXXX" compatibilityMode="Framework20SP2" />
+<machineKey compatibilityMode="Framework20SP2" ... />
 ```
 
 Available options are `CompatibilityMode.Framework20SP2` and `CompatibilityMode.Framework45`.

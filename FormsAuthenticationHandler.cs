@@ -88,7 +88,10 @@ namespace AspNetCore.FormsAuthentication
         {
             if (Request.Cookies.ContainsKey(Options.FormsAuthenticationCookieName))
             {
-                Response.Cookies.Delete(Options.FormsAuthenticationCookieName);
+                Response.Cookies.Delete(Options.FormsAuthenticationCookieName, new CookieOptions() {
+                    Domain = Options.Domain,
+                    Path = Options.Path
+                });
             }
             return Task.CompletedTask;
         }

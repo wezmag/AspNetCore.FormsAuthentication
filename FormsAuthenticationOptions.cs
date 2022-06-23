@@ -36,6 +36,14 @@ namespace AspNetCore.FormsAuthentication
         /// </summary>
         public string LoginUrl { get; set; }
         /// <summary>
+        /// Cookie Domain
+        /// </summary>
+        public string Domain { get; set; }
+        /// <summary>
+        /// Cookie Path
+        /// </summary>
+        public string Path { get; set; }
+        /// <summary>
         /// Function to process FormsAuthticationTicket.UserData
         /// </summary>
         public Func<string, List<Claim>, List<Claim>> UserDataHandler { get; set; } = (string userData, List<Claim> claims) => { return claims; };
@@ -52,6 +60,9 @@ namespace AspNetCore.FormsAuthentication
 
             if (string.IsNullOrWhiteSpace(LoginUrl))
                 throw new ArgumentNullException($"{nameof(LoginUrl)} can not be null or empty.");
+
+            if (string.IsNullOrWhiteSpace(Domain))
+                throw new ArgumentNullException($"{nameof(Domain)} can not be null or empty.");
 
         }
     }

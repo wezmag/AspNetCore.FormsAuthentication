@@ -35,6 +35,8 @@ services
         options.DecryptionKey = "960018AAD852DA413E15141EB9453801D7C659EC50FD530015F860065D4CFA73";
         options.LoginUrl = "https://your.sso.server.url/loginpage.aspx";
         options.ReturnUrlParameter = "ReturnUrl";
+        options.Domain = ".sso.server.url"; //same domain settings as the web.config in your sso server
+        options.Path = "/"; //same path settings as the web.config in your sso server
         options.UserDataHandler = (string userData, List<Claim> claims) =>
         {
             //just an example, please write your own handler.
@@ -72,6 +74,32 @@ You can find it in your web.config file.
 ``` xml
 <authentication mode="Forms">
     <forms name=".YOUR_COOKIE_NAME" .... />
+</authentication>
+```
+
+### Domain [required]
+
+This is the Domain settings of your FormsAuthentication cookie issued by the SSO server.
+
+You can find it in your web.config file.
+
+``` xml
+<authentication mode="Forms">
+    <forms domain=".sso.server.url" ... />
+</authentication>
+```
+
+### Path
+
+This is the Path settings of your FormsAuthentication cookie issued by the SSO server.
+
+The default value is "/".
+
+You can find it in your web.config file.
+
+``` xml
+<authentication mode="Forms">
+    <forms path="/" ... />
 </authentication>
 ```
 

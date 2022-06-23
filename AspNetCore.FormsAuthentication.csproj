@@ -1,12 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Wesley Huang</Authors>
+    <Company>Promise Technology</Company>
+    <PackageProjectUrl>https://apgit.promise.com.tw/wesley.huang/AspNetCore.FormsAuthentication</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://apgit.promise.com.tw/wesley.huang/AspNetCore.FormsAuthentication</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>FormsAuthentication</PackageTags>
+    <Description>Add support for FormsAuthentication cookie for .NET 6</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.LegacyAuthCookieCompat" Version="2.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

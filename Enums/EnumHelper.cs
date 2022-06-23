@@ -9,6 +9,7 @@
                 ShaVersion.Sha1 => LegacyAuthCookieCompat.ShaVersion.Sha1,
                 ShaVersion.Sha256 => LegacyAuthCookieCompat.ShaVersion.Sha256,
                 ShaVersion.Sha512 => LegacyAuthCookieCompat.ShaVersion.Sha512,
+                ShaVersion.Sha384 => LegacyAuthCookieCompat.ShaVersion.Sha384,
                 _ => LegacyAuthCookieCompat.ShaVersion.Sha1,
             };
         }

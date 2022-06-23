@@ -10,7 +10,7 @@ If you are looking for a way to implement SSO Auth server, this project is also 
 
 ## Reference NuGet Package
 
-This project uses [AspNetCore.LegacyAuthCookieCompat 2.0.3](https://www.nuget.org/packages/AspNetCore.LegacyAuthCookieCompat/) NuGet package to decrypt the FormsAuthentication ticket.
+This project uses [AspNetCore.LegacyAuthCookieCompat 2.0.4](https://www.nuget.org/packages/AspNetCore.LegacyAuthCookieCompat/) NuGet package to decrypt the FormsAuthentication ticket.
 
 You can find the source code of AspNetCore.LegacyAuthCookieCompat [here](https://github.com/dazinator/AspNetCore.LegacyAuthCookieCompat).
 

@@ -7,27 +7,18 @@ namespace AspNetCore.FormsAuthentication
 {
     public class FormsAuthenticationOptions : AuthenticationSchemeOptions
     {
-        public FormsAuthenticationOptions()
-        {
-            FormsAuthenticationCookieName = ".ASPXAUTH";
-            ShaVersion = ShaVersion.Sha1;
-            CompatibilityMode = CompatibilityMode.Framework20SP2;
-            ReturnUrlParameter = "ReturnUrl";
-            UserDataHandler = (string userData, List<Claim> claims) => { return claims; };
-        }
-
         /// <summary>
         /// FormsAuthentication Cookie Name (Default value is ".ASPXAUTH")
         /// </summary>
-        public string FormsAuthenticationCookieName { get; set; }
+        public string FormsAuthenticationCookieName { get; set; } = ".ASPXAUTH";
         /// <summary>
         /// SHA version (Default value is ShaVersion.Sha1)
         /// </summary>
-        public ShaVersion ShaVersion { get; set; }
+        public ShaVersion ShaVersion { get; set; } = ShaVersion.Sha1;
         /// <summary>
         /// Compatibility Mode (Default value is CompatibilityMode.Framework20SP2)
         /// </summary>
-        public CompatibilityMode CompatibilityMode { get; set; }
+        public CompatibilityMode CompatibilityMode { get; set; } = CompatibilityMode.Framework20SP2;
         /// <summary>
         /// Validation Key 
         /// </summary>
@@ -39,7 +30,7 @@ namespace AspNetCore.FormsAuthentication
         /// <summary>
         /// Return Url Parameter (Default value is "ReturnUrl")
         /// </summary>
-        public string ReturnUrlParameter { get; set; }
+        public string ReturnUrlParameter { get; set; } = "ReturnUrl";
         /// <summary>
         /// Login Url
         /// </summary>
@@ -47,7 +38,7 @@ namespace AspNetCore.FormsAuthentication
         /// <summary>
         /// Function to process FormsAuthticationTicket.UserData
         /// </summary>
-        public Func<string, List<Claim>, List<Claim>> UserDataHandler { get; set; }
+        public Func<string, List<Claim>, List<Claim>> UserDataHandler { get; set; } = (string userData, List<Claim> claims) => { return claims; };
 
         public override void Validate()
         {
